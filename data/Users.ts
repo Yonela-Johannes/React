@@ -1,42 +1,51 @@
 export default [{
     id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://scontent.fkiv3-1.fna.fbcdn.net/v/t31.0-1/s200x200/22256588_1932617800312085_5686197942193420542_o.jpg?_nc_cat=110&_nc_sid=7206a8&_nc_eui2=AeF3UwtnAs3QLEJRnLSp4-hQxlokCBJZ6JPGWiQIElnok9HafHyjqv9D4bW9zeNFfNJlg5jLsvbewM7j5OD-OFy-&_nc_ohc=IxycgYSpqQEAX8EcTqI&_nc_ht=scontent.fkiv3-1.fna&tp=7&oh=640a83293bb75378958d22b633302f1b&oe=5F9F4BB7',
-    status: "Hello there, how are you"
+    name: 'Yonela',
+    imageUri: 'https://scontent-cpt1-1.xx.fbcdn.net/v/t1.6435-9/62073590_2217445048376852_3413287347096125440_n.jpg?_nc_cat=103&ccb=1-4&_nc_sid=19026a&_nc_eui2=AeFtqHs1fSa-_yabRHO2tMZpFJPBqDQjGj0Uk8GoNCMaPXuIMtbI9s4F3XHtofbiWpEgCSdRLuRoVyJLNJEE7jK7&_nc_ohc=j2VogWb73D4AX8PvKG0&tn=nIqvCG08jW07qo5D&_nc_ht=scontent-cpt1-1.xx&oh=105aebbe947e46537a6cda3d370a7a82&oe=6130F7CE',
+    status: "Coding all day"
 }, {
     id: 'u2',
-    name: 'Lukas',
-    imageUri: 'https://scontent.fkiv3-1.fna.fbcdn.net/v/t1.0-1/p200x200/107443858_3074598385966770_1929559809312242379_n.jpg?_nc_cat=107&_nc_sid=7206a8&_nc_eui2=AeGly5fZLQUfAKei_EiACEq5Dfw2T_M-BQMN_DZP8z4FA_aLEVK_8e0dKvl_5vxVO0Zn-4OPzQ9pKS0c0XeXd898&_nc_ohc=z1ydC_UL4KsAX_tfrbv&_nc_oc=AQknywM4y1IAQaQZaZkPdtkUmaem060LXSByeTx3pdQXWfxW2_tdzfgRsQIXQK_zV94&_nc_ht=scontent.fkiv3-1.fna&tp=6&oh=69508c88f073f64f432fc1f1ab9299e8&oe=5F9C5FD5',
+    name: 'Willow',
+    imageUri: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F14%2F2018%2F11%2F19%2F111918-willow-smith-lead-2000.jpg&q=85',
+    style: 'Rehearsing for my first new movie'
 }, {
     id: 'u3',
-    name: 'Daniil',
-    imageUri: 'https://scontent.fkiv3-1.fna.fbcdn.net/v/t31.0-8/14242257_122280314893965_2111799435851825649_o.jpg?_nc_cat=100&_nc_sid=09cbfe&_nc_eui2=AeH1OfzTrJPQ6gm8y5chASx9XduE6cDoPWBd24TpwOg9YB3iQXtk3WFlfnz5Z8K89WDuLYc3YgooGcmFvcn5fpBL&_nc_ohc=HZKFqosOM-IAX_SsXhT&_nc_oc=AQksp486WazJyCTMR5esRx51kZ8He2qUotQP7EAtzySMJl7i9H2Pv4PpULir6W5Eglk&_nc_ht=scontent.fkiv3-1.fna&oh=b45419e5106747d75fdd548392517a3c&oe=5F9FB4DD',
+    name: 'Sister❤❤',
+    imageUri:  'https://scontent-cpt1-1.xx.fbcdn.net/v/t1.6435-9/116341067_3260760943974090_6010081215467897728_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=174925&_nc_eui2=AeFY-NMapq9KYAQvQ61V8560YeY_EVXod2Vh5j8RVeh3ZQu1PiiNo-kEDDbVdMoXZzR_t3HSw48Awt9weQXg0DNA&_nc_ohc=IELv3cCk0tQAX-of6Bo&_nc_ht=scontent-cpt1-1.xx&oh=60e8d07ae9e0855f05e4ec124aefded3&oe=61310032',
+    status: 'I will take no vaccine',
 }, {
     id: 'u4',
-    name: 'Alex',
-    imageUri: 'https://scontent.fkiv3-1.fna.fbcdn.net/v/t1.0-9/120265890_2659046234308755_83273782629061168_n.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_eui2=AeFydVcQHwdfhPgKavejHgTkZj50mLqkTwRmPnSYuqRPBBjekO0sZKdUNlELv62Htps4xAUKslo4tD8g8YyTPQ50&_nc_ohc=YcnPR2BvKUgAX_rSMDJ&_nc_ht=scontent.fkiv3-1.fna&oh=ea3bcd9c21e5538c744e4cb19464713b&oe=5F9E4002',
+    name: 'Yara #crush',
+    imageUri: 'https://tvline.com/wp-content/uploads/2018/01/grownish-recap.jpg?w=620',
+    status: 'All day in my zone. See later',
 }, {
     id: 'u5',
-    name: 'Vlad',
-    imageUri: 'https://scontent.fkiv3-1.fna.fbcdn.net/v/t1.15752-9/120640479_2760477844167786_6938949653508389840_n.jpg?_nc_cat=108&_nc_sid=ae9488&_nc_eui2=AeGVhYmC95nNnVy1xOf6ArJ2jSXP0lcbAsGNJc_SVxsCwevGmgj2fByDCyiWY8iQK-k-KkqYMmK-pPRahQiFUqAT&_nc_ohc=0d4q0ZI3HTgAX_0LSog&_nc_ht=scontent.fkiv3-1.fna&oh=c9155df4d012070901bce3e8f0e2d877&oe=5F9F9DF5',
+    name: 'Sphamandla',
+    imageUri: 'https://scontent-cpt1-1.xx.fbcdn.net/v/t1.6435-9/223800346_349976739922461_2964509519324238002_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeEqIb37X3Xk88YLRHJ2c-uV9zu7MYLA0LL3O7sxgsDQsiLkqInA-GQKJJwizwfCILW8NSOL43hIobDUSabIRv9J&_nc_ohc=r-MMZLA2PVcAX9zNqQ8&_nc_ht=scontent-cpt1-1.xx&oh=ba9ca5a5ce29b9c74ff726056f25948d&oe=61301461',
+    status: 'I work harder than all the rest',
 }, {
     id: 'u6',
-    name: 'Elon Musk',
-    imageUri: 'https://scontent.fkiv3-1.fna.fbcdn.net/v/t1.0-9/117929133_107809907710190_7419805747453745280_n.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_eui2=AeHyr9m8dMUXCyqgYiDxTTMqypeilYrkr1_Kl6KViuSvX2aKglh0TaInpI6Uqbk8nRSKq6iOQuTncbpb6Uik2iH8&_nc_ohc=YusbV4P7yQMAX9ptPAN&_nc_ht=scontent.fkiv3-1.fna&oh=ebee2db09b2a70c9dbef1bdad876c09c&oe=5F9D4112',
+    name: 'Russ',
+    imageUri: 'https://www.rap-up.com/app/uploads/2020/08/russ-kehlani.jpg',
+    status: 'Guess What',
 }, {
     id: 'u7',
-    name: 'Adrian',
-    imageUri: 'https://scontent.fkiv3-1.fna.fbcdn.net/v/t31.0-8/12185020_10206884996416284_5116038671917824834_o.jpg?_nc_cat=101&_nc_sid=174925&_nc_eui2=AeGr_NhJtwGWWfHbkoBSmifLKzIg47DpEF0rMiDjsOkQXf7yavDd4m-3CLbl5nqAMGcj2nn0Dqg7beNAzuZMzTFK&_nc_ohc=KOCn_AYCJxkAX_ZcLBP&_nc_ht=scontent.fkiv3-1.fna&oh=8cc4e5445ce4633db9d6234f42ccb368&oe=5F9C24D1',
+    name: 'Ta Ace Mangqayi',
+    imageUri: 'https://scontent-cpt1-1.xx.fbcdn.net/v/t1.6435-9/83673080_3656430524371142_2023368195022442990_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=19026a&_nc_eui2=AeEX57kk2CH4bW6g1EqyVIa1AuifqS9Wi6IC6J-pL1aLoh1KO-BFRoQe9gyCRbIL2c_tsxlyJlvWP4IEGkcIrWsp&_nc_ohc=vD7mD5DosUcAX8Zg5vh&_nc_ht=scontent-cpt1-1.xx&oh=750f505b34dde6d6f8f4e9e200498268&oe=6130D728',
+    status: 'Always spread the love when I get back',
 }, {
     id: 'u8',
-    name: 'Borja',
-    imageUri: 'https://scontent.fkiv3-1.fna.fbcdn.net/v/t1.0-9/14639688_10154618563394501_7732414502546927586_n.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_eui2=AeHoAmU6vBHtxse4pY5lCxy5mE72isysx5eYTvaKzKzHl0wF5HhppdSbpFTEnGVXBMLig16R9B4iHrsuAOk_V_fY&_nc_ohc=Sit1NLT0GMsAX9baI56&_nc_ht=scontent.fkiv3-1.fna&oh=16d88a54bb1629c24e77afed0c49f869&oe=5F9EAC05',
+    name: '6LACK',
+    imageUri: 'https://static.billboard.com/files/media/6lack-Artist-Visit-11-10-16-billboard-1548-compressed.jpg',
+    status: 'She aint know no better but I did, poor decision making for the kid',
 }, {
     id: 'u9',
-    name: 'Mom',
-    imageUri: 'https://image.shutterstock.com/image-vector/super-mom-hero-superhero-cartoon-600w-720015928.jpg',
+    name: 'Ta Bongs',
+    imageUri: 'https://scontent-cpt1-1.xx.fbcdn.net/v/t1.6435-1/c0.0.200.200a/p200x200/40020428_974263342780299_1126958826734485504_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=7206a8&_nc_eui2=AeEiZmUavQZ_OtYCC5QvC0HkUsR5FC4B7rdSxHkULgHut4VHN0M552XCAG32RznPG47uvUTudUgaro0AlduHEk1G&_nc_ohc=Zp9d13tR01oAX8rD6mk&_nc_ht=scontent-cpt1-1.xx&oh=e2d57ef3b85d1a557b01180e91ca0a18&oe=61319E5D',
+    status: 'No fake shit against me shall propser',
 }, {
     id: 'u10',
-    name: 'Angelina Jolie',
-    imageUri: 'https://lkbkspro.s3.amazonaws.com/atelier-management/gs_58d933b8-98b4-468e-b229-43100a9620a7.jpg',
+    name: 'Daddy💥',
+    imageUri: 'https://scontent-cpt1-1.xx.fbcdn.net/v/t1.6435-9/42294022_1973855682664629_2683273641285648384_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=8bfeb9&_nc_eui2=AeGnKOfWSMwn55W8osockA5stukscwNvp7i26SxzA2-nuK-ahbhxKkSLR78Ukc5XufBhL9JPgg5FHhRa3OPxiN9L&_nc_ohc=HZLqtqqDF2wAX-U50-4&_nc_ht=scontent-cpt1-1.xx&oh=3605f5baa344d118825e39877a9841e4&oe=613201AB',
+    status: 'Free yourselves from all forms of conditioning - JK',
 }]

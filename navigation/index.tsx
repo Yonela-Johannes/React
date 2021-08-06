@@ -7,7 +7,7 @@ import Colors from '../constants/Colors';
 import { Octicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import  ChatRoomScreen from "../screens/ChatRoomScreen";
 import  RoomScreen from "../screens/RoomsScreen"
-
+import ContactsScreen from '../screens/ContactsScreen';
 import { Text, 
   View, 
   Image, 
@@ -88,6 +88,7 @@ function RootNavigator() {
       )
       })} 
       />
+      <Stack.Screen name="Contacts" component={ContactsScreen} options={{ title: 'Contacts' }} />
       <Stack.Screen name="Rooms" component={RoomScreen} options={{ title: 'Rooms' }} />
     </Stack.Navigator>
   );

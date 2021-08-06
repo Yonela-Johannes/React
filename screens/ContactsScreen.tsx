@@ -1,24 +1,24 @@
 import * as React from 'react';
 import { FlatList, StyleSheet } from 'react-native';
+import ContactListItem from '../components/ContactListItem';
 
-import ChatListItem from '../components/ChatListItem';
-import NewMessageButton from '../components/NewMessageButton/';
+
+import NewMessageButton from '../components/NewMessageButton';
 import { View } from '../components/Themed';
-import chatRooms from '../data/ChatRooms'
+import users from '../data/Users'
 
 // export type ChatListItemProps = {
 //   chatRoom : ChatRoom;
 // }
 
-export default function ChatScreen() {
+export default function ContactsScreen() {
   return (
     <View style={styles.container}>
     <FlatList style={{width: '100'}}
-     data={chatRooms}
-    renderItem={({ item }) => <ChatListItem chatRoom={item} /> }
+     data={users}
+    renderItem={({ item }) => <ContactListItem user={item} /> }
     keyExtractor={(item) => item.id}
     />
-    <NewMessageButton />
     </View>
   );
 }
