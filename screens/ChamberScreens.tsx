@@ -1,15 +1,14 @@
-import { Chat } from "@material-ui/icons";
 import * as React from "react";
-import { Text, View, StyleSheet } from "react-native";
-import styles from "../components/Avatar/style";
-import ChambersListItem from '../components/ChambersListItem'
-import ChamberHeader from "../components/ChambersListItem/ChamberHeader"
+import { View } from "react-native";
+import ChamberHeader from "../components/ChambersListItem/ChamberHeader";
+import ChamberListRooms  from "../components/ChamberListRooms/ChamberListRooms";
+
 
 export default function ChamberScreen(){
     return (
-        <View style={styles.container}>
+        <View>
           <ChamberHeader />
-          {/* <ChambersListItem chamberRoom={{lastMessage: {content: 'Hello There'}}} /> */}
+          <ChamberListRooms />
         </View> 
     );
 }

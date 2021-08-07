@@ -25,7 +25,7 @@ export default function MainTabNavigator() {
 
   return (
     <mainTab.Navigator
-      initialRouteName="Home"
+      initialRouteName="Chambers"
       tabBarOptions={{
          activeTintColor: Colors[colorScheme].background,
          style: {

@@ -3,6 +3,7 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
+import ProfilePicture from'../components/ProfilePicture'
 import Colors from '../constants/Colors';
 import { Octicons, MaterialCommunityIcons} from '@expo/vector-icons';
 import  ChatRoomScreen from "../screens/ChatRoomScreen";
