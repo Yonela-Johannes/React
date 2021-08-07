@@ -9,7 +9,7 @@ const ChamberHeader = function(){
     return (
         <View style={styles.container}>
             <View style={styles.mainContainer}>
-            <Text color='white'>Wolseley</Text>           
+            <Text>Wolseley</Text>           
             </View>
             <View style={styles.midContainer}>
 

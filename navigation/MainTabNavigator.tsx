@@ -9,7 +9,8 @@ import useColorScheme from '../hooks/useColorScheme';
 import ChatScreen from '../screens/ChatScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { MainTabParamList, TabTwoParamList, RoomsNavigatorParamList} from '../types';
-import { Fontisto } from '@expo/vector-icons'
+import { Fontisto } from '@expo/vector-icons';
+import LoginScreen from '../screens/LoginScreen';
 import { Entypo } from '@expo/vector-icons'
 import { Zocial } from '@expo/vector-icons'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
@@ -25,7 +26,7 @@ export default function MainTabNavigator() {
 
   return (
     <mainTab.Navigator
-      initialRouteName="Chambers"
+      initialRouteName="login"
       tabBarOptions={{
          activeTintColor: Colors[colorScheme].background,
          style: {
@@ -35,6 +36,14 @@ export default function MainTabNavigator() {
            fontWeight: 'bold',
          },
          }}>
+      <mainTab.Screen
+        name="login"
+        component={LoginScreen}
+         options={{
+           tabBarIcon: ({ color: string }) => <MaterialCommunityIcons name="home-heart" color="#fff" size={20} />,
+           tabBarLabel: () => null
+         }}
+         />
       <mainTab.Screen
         name="Home"
         component={HomeScreen}

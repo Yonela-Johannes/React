@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import React from 'react';
+import { grey } from '@material-ui/core/colors';
 
 const styles = StyleSheet.create({
     container: {
@@ -7,8 +8,8 @@ const styles = StyleSheet.create({
         paddingTop: 20,
         paddingLeft: 10,
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        // justifyContent: 'center',
+        // alignItems: 'center',
         flexDirection: 'column',
     },
     mainContainer: {
@@ -20,6 +21,11 @@ const styles = StyleSheet.create({
     midContainer: {
         display: 'flex',
         alignItems: 'flex-start',
+        cursor: 'pointer',
+        '&hover': {
+            color: 'grey',
+            backgroundColor: 'grey',
+        }
     },
 
 });
