@@ -10,17 +10,18 @@ export type RootStackParamList = {
   ChatRoom: undefined;
 };
 
+export type RoomsNavigatorParamList = {
+  ChambersScreen: undefined;
+};
+
 export type MainTabParamList = {
-  Camera: undefined;
+  TabOneScreen: undefined;
+  Home: undefined;
   Chats: undefined;
   Status: undefined;
   Calls: undefined;
+  Chambers: undefined;
   Rooms: undefined;
-  Newsfeed: undefined;
-};
-
-export type TabOneParamList = {
-  TabOneScreen: undefined;
 };
 
 export type TabTwoParamList = {
@@ -41,6 +42,12 @@ export type Message = {
 }
 
 export type ChatRoom = {
+  id: String,
+  users: User[];
+  lastMessage: Message;
+}
+
+export type ChamberRoom = {
   id: String,
   users: User[];
   lastMessage: Message;

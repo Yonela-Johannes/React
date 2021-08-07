@@ -10,9 +10,7 @@ export type ContactListItemProps = {
 const ContactListItem = (props: ContactListItemProps) => {
     const { user } = props;
 
-    const navigation = useNavigation();
-
-    const onClick = () => { 
+     const onClick = () => { 
         // Navigate to chat room with this user  
         }
     

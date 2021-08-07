@@ -4,16 +4,20 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 import Colors from '../constants/Colors';
-import { Octicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { Octicons, MaterialCommunityIcons} from '@expo/vector-icons';
 import  ChatRoomScreen from "../screens/ChatRoomScreen";
+import  ChamberRoomScreen from "../screens/ChamberScreens";
 import  RoomScreen from "../screens/RoomsScreen"
 import ContactsScreen from '../screens/ContactsScreen';
+import { Logo } from "../assets/images/reactLogo.png";
+import { ImageBackground } from 'react-native'
+import styles from './styles';
 import { Text, 
   View, 
   Image, 
 } from 'react-native';
-import { FontAwesome5, MaterialIcons, Entypo } from '@expo/vector-icons';
-
+import { FontAwesome5, MaterialIcons, Entypo, Ionicons } from '@expo/vector-icons';
+import { FiberSmartRecord } from '@material-ui/icons';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
@@ -53,18 +57,25 @@ function RootNavigator() {
           name="Root"
           component={MainTabNavigator}
           options={{
-              title: "React.",
+              showLabel: false,
+              headerTitle: () => (
+                <View style={styles.userName}>
+                  <Text style={styles.userName}>Yonela Johannes</Text>
+                </View>
+              ),
               headerRight: () => (
                   <View
                       style={{
                           flexDirection: 'row',
-                          width: 60,
+                          width: 170,
+                          cursor: 'pointer',
                           justifyContent: "space-between",
                           backgroundColor: "transparent",
-                          cursor: "pointer",
                           marginRight: "10"}}>
-                      <Octicons name={"search"} size={20} color={"white"}/>
-                      <MaterialCommunityIcons name={"dots-vertical"} size={20} color={"white"} />
+                      <Octicons name={"search"} size={20} color={"#fff"}/>
+                      <MaterialCommunityIcons name="creation" size={24} color="#fff" />
+                      <Ionicons name="information-circle-outline" size={24} color="#fff" />
+                      <MaterialCommunityIcons name={"dots-vertical"} size={20} color={"#fff"} />
                   </View>
               )
           }}
@@ -88,7 +99,7 @@ function RootNavigator() {
       )
       })} 
       />
-      <Stack.Screen name="Contacts" component={ContactsScreen} options={{ title: 'Contacts' }} />
+      <Stack.Screen name="Chambers" component={ChamberRoomScreen} options={{ title: 'Rooms' }} />
       <Stack.Screen name="Rooms" component={RoomScreen} options={{ title: 'Rooms' }} />
     </Stack.Navigator>
   );
