@@ -18,6 +18,7 @@ import {  FontAwesome5 } from '@expo/vector-icons'
 import RoomsScreen from '../screens/RoomsScreen';
 import ChamberScreen from '../screens/ChamberScreens';
 import HomeScreen from "../screens/HomeScreen";
+import RegisterScreen from '../screens/RegisterScreen';
 
 const mainTab = createBottomTabNavigator<MainTabParamList>();
 
@@ -26,7 +27,7 @@ export default function MainTabNavigator() {
 
   return (
     <mainTab.Navigator
-      initialRouteName="login"
+      initialRouteName="Register"
       tabBarOptions={{
          activeTintColor: Colors[colorScheme].background,
          style: {
@@ -37,8 +38,16 @@ export default function MainTabNavigator() {
          },
          }}>
       <mainTab.Screen
-        name="login"
+        name="Login"
         component={LoginScreen}
+         options={{
+           tabBarIcon: ({ color: string }) => <MaterialCommunityIcons name="home-heart" color="#fff" size={20} />,
+           tabBarLabel: () => null
+         }}
+         />
+      <mainTab.Screen
+        name="Register"
+        component={RegisterScreen}
          options={{
            tabBarIcon: ({ color: string }) => <MaterialCommunityIcons name="home-heart" color="#fff" size={20} />,
            tabBarLabel: () => null

@@ -8,8 +8,6 @@ const styles = StyleSheet.create({
         paddingTop: 20,
         paddingLeft: 10,
         display: 'flex',
-        // justifyContent: 'center',
-        // alignItems: 'center',
         flexDirection: 'column',
     },
     mainContainer: {

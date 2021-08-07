@@ -16,12 +16,15 @@ export type RoomsNavigatorParamList = {
 
 export type MainTabParamList = {
   TabOneScreen: undefined;
+  Login: undefined;
+  Register: undefined;
   Home: undefined;
   Chats: undefined;
   Status: undefined;
   Calls: undefined;
   Chambers: undefined;
   Rooms: undefined;
+
 };
 
 export type TabTwoParamList = {
