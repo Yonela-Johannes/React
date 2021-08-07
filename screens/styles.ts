@@ -17,10 +17,14 @@ const styles = StyleSheet.create({
 
     },
     registerContainer: {
-
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 10,
+        backgroundColor: '',
     },
-    registerinputContainer: {
-        
+    registerInputContainer: {
+    width: 330,
     },
 });
 
