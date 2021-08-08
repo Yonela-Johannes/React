@@ -1,14 +1,11 @@
 import * as React from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 
-import ChatListItem from '../components/ChatListItem';
 import NewMessageButton from '../components/NewMessageButton';
 import { View } from '../components/Themed';
 import chatRooms from '../data/ChatRooms'
+import ChatListItem from '../components/ChatListItem/index';
 
-// export type ChatListItemProps = {
-//   chatRoom : ChatRoom;
-// }
 
 export default function ChatScreen() {
   return (

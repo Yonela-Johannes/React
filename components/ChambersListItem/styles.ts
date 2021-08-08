@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         // borderTop: {border: '1px solid black'},
     },
     midContainer: {
-
+        flex: 1
     },
 })
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { Button, Text, Input } from 'react-native-elements';
 import {  KeyboardAvoidingView, View  } from 'react-native';
 import styles from './styles';
@@ -12,9 +12,17 @@ const RegisterScreen = ({ navigation }) => {
     const [password, setPassword] = useState('');
     const [imageUrl, setImageUrl] = useState('');
 
+    
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            headerBackTitle: "Back To Login",
+        });
+    }, [navigation]);
     const register = () => {
 
-    }
+
+    };
+
     return(
         <KeyboardAvoidingView behavior="padding" style={styles.registerContainer} >
             <StatusBar style="light" />

@@ -11,11 +11,9 @@ import TabTwoScreen from '../screens/TabTwoScreen';
 import { MainTabParamList, TabTwoParamList, RoomsNavigatorParamList} from '../types';
 import { Fontisto } from '@expo/vector-icons';
 import LoginScreen from '../screens/LoginScreen';
-import { Entypo } from '@expo/vector-icons'
 import { Zocial } from '@expo/vector-icons'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import {  FontAwesome5 } from '@expo/vector-icons'
-import RoomsScreen from '../screens/RoomsScreen';
 import ChamberScreen from '../screens/ChamberScreens';
 import HomeScreen from "../screens/HomeScreen";
 import RegisterScreen from '../screens/RegisterScreen';
@@ -27,7 +25,7 @@ export default function MainTabNavigator() {
 
   return (
     <mainTab.Navigator
-      initialRouteName="Register"
+      initialRouteName="Rooms"
       tabBarOptions={{
          activeTintColor: Colors[colorScheme].background,
          style: {
@@ -36,6 +34,7 @@ export default function MainTabNavigator() {
          labelStyle: {
            fontWeight: 'bold',
          },
+         
          }}>
       <mainTab.Screen
         name="Login"

@@ -55,3 +55,9 @@ export type ChamberRoom = {
   users: User[];
   lastMessage: Message;
 }
+export type Room = {
+  id: String,
+  users: User[];
+  lastMessage: Message;
+  room: Room;
+}

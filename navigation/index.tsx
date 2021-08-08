@@ -3,24 +3,16 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
-import ProfilePicture from'../components/ProfilePicture'
 import Colors from '../constants/Colors';
 import { Octicons, MaterialCommunityIcons} from '@expo/vector-icons';
 import  ChatRoomScreen from "../screens/ChatRoomScreen";
 import  ChamberRoomScreen from "../screens/ChamberScreens";
 import  RoomScreen from "../screens/RoomsScreen"
-import ContactsScreen from '../screens/ContactsScreen';
-import { Logo } from "../assets/images/reactLogo.png";
-import { ImageBackground } from 'react-native'
 import styles from './styles';
 import { Text, 
-  View, 
-  Image, 
+  View
 } from 'react-native';
 import { FontAwesome5, MaterialIcons, Entypo, Ionicons } from '@expo/vector-icons';
-import { FiberSmartRecord } from '@material-ui/icons';
-
-import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import MainTabNavigator from './MainTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -61,7 +53,9 @@ function RootNavigator() {
               showLabel: false,
               headerTitle: () => (
                 <View style={styles.userName}>
+                  {/* <Avatar /> */}
                   <Text style={styles.userName}>Yonela Johannes</Text>
+                  {/* <Text>This is my id</Text> */}
                 </View>
               ),
               headerRight: () => (
@@ -101,7 +95,7 @@ function RootNavigator() {
       })} 
       />
       <Stack.Screen name="Chambers" component={ChamberRoomScreen} options={{ title: 'Rooms' }} />
-      <Stack.Screen name="Rooms" component={RoomScreen} options={{ title: 'Rooms' }} />
+      <Stack.Screen name="Room" component={RoomScreen} options={{ title: 'Room' }} />
     </Stack.Navigator>
   );
 }

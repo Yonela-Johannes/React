@@ -4,15 +4,15 @@ import { Text,
     View, 
     Image, 
     TouchableWithoutFeedback } from 'react-native';
-import { ChatRoom } from "../../types";
+import { Room } from "../../types";
 import moment from 'moment';
 import { useNavigation } from '@react-navigation/native';
 
 
 export type RoomListItemProps = {
-    chatRoom : chatRoom;
+    room : Room;
 }
-const ChatListItem = (props: ChatListItemProps) => {
+const RoomListItem = (props: RoomListItemProps) => {
     const { room } = props;
 
     const navigation = useNavigation();
@@ -32,13 +32,12 @@ const ChatListItem = (props: ChatListItemProps) => {
                 <Text style={styles.username}>{user.name}</Text>
                 <Text numberOfLines={2}
                  ellipsizeMode={"tail"}
-                  style={styles.lastMessage}>{chatRoom.lastMessage.content}</Text>
+                  style={styles.lastMessage}>{room.lastMessage.content}</Text>
                 </View>
             </View>
-            <Text style={styles.time}>{moment(chatRoom.lastMessage.createdAt).subtract(6, 'days').calendar()}</Text>
         </View>
         </TouchableWithoutFeedback>
     ) 
 };
 
-export default ChatListItem;
+export default RoomListItem;
