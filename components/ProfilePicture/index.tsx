@@ -15,4 +15,4 @@ const ProfilePicture = ({image, size = 50}: ProfilePictureProps) => {
     />
 }
 
-export default class ProfilePicture;
+export default ProfilePicture;

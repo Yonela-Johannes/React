@@ -12,9 +12,12 @@ const styles = StyleSheet.create({
     },
     midContainer: {
         justifyContent: 'space-between',
+        overflow: 'hidden',
     },
     leftContainer: {
         flexDirection: 'row',
+        borderRadius: '2px #000',
+
     },
     avatar: {
         width: 40,

@@ -8,24 +8,21 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ChatScreen from '../screens/ChatScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
-import { MainTabParamList, TabTwoParamList, RoomsNavigatorParamList} from '../types';
+import { MainTabParamList, TabTwoParamList } from '../types';
 import { Fontisto } from '@expo/vector-icons';
-import LoginScreen from '../screens/LoginScreen';
 import { Zocial } from '@expo/vector-icons'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import {  FontAwesome5 } from '@expo/vector-icons'
 import ChamberScreen from '../screens/ChamberScreens';
 import HomeScreen from "../screens/HomeScreen";
-import RegisterScreen from '../screens/RegisterScreen';
 
 const mainTab = createBottomTabNavigator<MainTabParamList>();
-
 export default function MainTabNavigator() {
   const colorScheme = useColorScheme();
 
   return (
     <mainTab.Navigator
-      initialRouteName="Rooms"
+      initialRouteName="Home"
       tabBarOptions={{
          activeTintColor: Colors[colorScheme].background,
          style: {
@@ -36,26 +33,7 @@ export default function MainTabNavigator() {
          },
          
          }}>
-      <mainTab.Screen
-        name="Login"
-        component={LoginScreen}
-         options={{
-           tabBarIcon: ({ color: string }) => <MaterialCommunityIcons name="home-heart" color="#fff" size={20} />,
-           tabBarLabel: () => null
-         }}
-         />
-      <mainTab.Screen
-        name="Register"
-        component={RegisterScreen}
-         options={{
-           tabBarIcon: ({ color: string }) => <MaterialCommunityIcons name="home-heart" color="#fff" size={20} />,
-           tabBarLabel: () => null
-         }}
-         />
-      <mainTab.Screen
-        name="Home"
-        component={HomeScreen}
-         options={{
+      <mainTab.Screen name="Home" component={HomeScreen} options={{
            tabBarIcon: ({ color: string }) => <MaterialCommunityIcons name="home-heart" color="#fff" size={20} />,
            tabBarLabel: () => null
          }}

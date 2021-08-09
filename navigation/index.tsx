@@ -16,19 +16,17 @@ import { FontAwesome5, MaterialIcons, Entypo, Ionicons } from '@expo/vector-icon
 import { RootStackParamList } from '../types';
 import MainTabNavigator from './MainTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
+import ProfilePicture from '../components/ProfilePicture/index';
 
-export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
-  return (
-    <NavigationContainer
-      linking={LinkingConfiguration}
-      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <RootNavigator />
-    </NavigationContainer>
-  );
-}
-
-// A root stack navigator is often used for displaying modals on top of all other content
-// Read more here: https://reactnavigation.org/docs/modal
+// export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
+//   return (
+//     <NavigationContainer
+//       linking={LinkingConfiguration}
+//       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+//       <RootNavigator />
+//     </NavigationContainer>
+//   );
+// }
 const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
@@ -53,8 +51,8 @@ function RootNavigator() {
               showLabel: false,
               headerTitle: () => (
                 <View style={styles.userName}>
-                  {/* <Avatar /> */}
-                  <Text style={styles.userName}>Yonela Johannes</Text>
+                  {/* <ProfilePicture image="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F14%2F2018%2F11%2F19%2F111918-willow-smith-lead-2000.jpg&q=85" /> */}
+                  <Text style={styles.userName}>Yonela</Text>
                   {/* <Text>This is my id</Text> */}
                 </View>
               ),
@@ -99,3 +97,4 @@ function RootNavigator() {
     </Stack.Navigator>
   );
 }
+ec
