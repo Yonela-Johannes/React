@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     username: {
         fontWeight: 'bold',
         fontSize: 17,
+        color: '#49274b',
     },
     lastMessage: {
         fontSize: 16,

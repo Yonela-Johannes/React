@@ -2,17 +2,13 @@ import * as React from 'react';
 import { Text, View, ImageBackground } from 'react-native';
 import feed from "../data/feed"
 import Feeds from '../components/Feeds/Feeds'
-import BG from '../assets/images/sigmaLogo.png';
-
-
+import MessageSender from '../components/MessageSender/MessageSender'
 const HomeScreen = () => {
     return(
-        <ImageBackground style={{width:'100%', height: '100%'}} source={BG}>
-            <View>
-                <Feeds feed={feed[0]}/> 
-                <Text>Ndibonga Came Home Late</Text>
-            </View>
-        </ImageBackground>
+        <View>
+            <Feeds feed={feed[0]} /> 
+            <MessageSender />
+        </View>
     )
 }
 

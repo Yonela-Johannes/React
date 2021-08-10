@@ -9,22 +9,22 @@ import moment from 'moment';
 import { useNavigation } from '@react-navigation/native';
 
 
-export type RoomListItemProps = {
-    chatRoom : chatRoom;
+export type ChatListItemProps = {
+    chatRoom : ChatRoom;
 }
 const ChatListItem = (props: ChatListItemProps) => {
-    const { room } = props;
+    const { chatRoom } = props;
 
     const navigation = useNavigation();
     const onClick = () => {
-        navigation.navigate('Room', {
-        id: room.id,
+        navigation.navigate('chatRoom', {
+        id: chatRoom.id,
         name: user.name,
         })
     }
-    const user = room.users[1];
+    const user = chatRoom.users[1];
     return (
-        <TouchableWithoutFeedback onPress={onClick} style={{cursor: 'pointer'}}>
+        <TouchableWithoutFeedback onPress={onClick}>
         <View style={styles.container}>
             <View style={styles.leftContainer}>
             <Image source={{ uri: user.imageUri }} style={styles.avatar} />           

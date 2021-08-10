@@ -59,22 +59,26 @@ export type Room = {
   id: String,
   users: User[];
   lastMessage: Message;
-  room: Room;
 }
 
 export type UserType = {
   id: string,
   name: string,
   username: string,
+  createdAt: string,
   image?: string,
 }
+
 export type FeedType = {
   id: string,
-  createdAt: string,
   user: UserType,
+  createdAt: string,
   content: string,
-  image?: string,
-  numberOfComments?: number,
-  numberOfReweets?: number,
+  numbeOfComments?: number;
+  numberFeeds?: number,
   numberOfLikes?: number,
+  numberOfUnlikes?: number,
+  numberOfLoves?: number,
+  numberOfUnLoves?: number,
+  numberOfReacts: number,
 }

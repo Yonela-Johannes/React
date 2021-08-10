@@ -6,7 +6,7 @@ import ChatMessage from '../components/ChatMessage';
 import BG from '../assets/images/reactlogobg.png';
 import InputBox from '../components/InputBox/Index';
 
-const ChatRoomScreen = ()=> {
+const RoomChatScreen = ()=> {
     const route = useRoute();
 
     return (
@@ -18,4 +18,4 @@ const ChatRoomScreen = ()=> {
         </ImageBackground>
     );
 }
-export default ChatRoomScreen;
+export default RoomChatScreen;

@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
     },
     mainContainer: {
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        // justifyContent: 'center',
+        // alignItems: 'center',
         flexDirection: 'row',
     },
     midContainer: {
@@ -25,6 +25,11 @@ const styles = StyleSheet.create({
             backgroundColor: 'grey',
         }
     },
+    // horizontal: {
+    //     marginTop: 10,
+    //     marginBottom: 10,
+    //     borderBottom: '1px solid',
+    // }
 
 });
 

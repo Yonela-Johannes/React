@@ -5,10 +5,7 @@ import { Text,
     Image, 
     TouchableWithoutFeedback } from 'react-native';
 import { Room } from "../../types";
-import moment from 'moment';
 import { useNavigation } from '@react-navigation/native';
-
-
 export type RoomListItemProps = {
     room : Room;
 }
@@ -17,7 +14,7 @@ const RoomListItem = (props: RoomListItemProps) => {
 
     const navigation = useNavigation();
     const onClick = () => {
-        navigation.navigate('Room', {
+        navigation.navigate('chatRoom', {
         id: room.id,
         name: user.name,
         })

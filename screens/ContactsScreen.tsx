@@ -1,16 +1,8 @@
 import * as React from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import ContactListItem from '../components/ContactListItem';
-
-
-import NewMessageButton from '../components/NewMessageButton';
 import { View } from '../components/Themed';
 import users from '../data/Users'
-
-// export type ChatListItemProps = {
-//   chatRoom : ChatRoom;
-// }
-
 export default function ContactsScreen() {
   return (
     <View style={styles.container}>

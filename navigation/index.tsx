@@ -4,7 +4,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 import Colors from '../constants/Colors';
-import { Octicons, MaterialCommunityIcons} from '@expo/vector-icons';
 import  ChatRoomScreen from "../screens/ChatRoomScreen";
 import  ChamberRoomScreen from "../screens/ChamberScreens";
 import  RoomScreen from "../screens/RoomsScreen"
@@ -12,21 +11,19 @@ import styles from './styles';
 import { Text, 
   View
 } from 'react-native';
-import { FontAwesome5, MaterialIcons, Entypo, Ionicons } from '@expo/vector-icons';
-import { RootStackParamList } from '../types';
 import MainTabNavigator from './MainTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 import ProfilePicture from '../components/ProfilePicture/index';
 
-// export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
-//   return (
-//     <NavigationContainer
-//       linking={LinkingConfiguration}
-//       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-//       <RootNavigator />
-//     </NavigationContainer>
-//   );
-// }
+export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
+  return (
+    <NavigationContainer
+      linking={LinkingConfiguration}
+      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      <RootNavigator />
+    </NavigationContainer>
+  );
+}
 const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
@@ -48,7 +45,6 @@ function RootNavigator() {
           name="Root"
           component={MainTabNavigator}
           options={{
-              showLabel: false,
               headerTitle: () => (
                 <View style={styles.userName}>
                   {/* <ProfilePicture image="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F14%2F2018%2F11%2F19%2F111918-willow-smith-lead-2000.jpg&q=85" /> */}
@@ -56,21 +52,6 @@ function RootNavigator() {
                   {/* <Text>This is my id</Text> */}
                 </View>
               ),
-              headerRight: () => (
-                  <View
-                      style={{
-                          flexDirection: 'row',
-                          width: 170,
-                          cursor: 'pointer',
-                          justifyContent: "space-between",
-                          backgroundColor: "transparent",
-                          marginRight: "10"}}>
-                      <Octicons name={"search"} size={20} color={"#fff"}/>
-                      <MaterialCommunityIcons name="creation" size={24} color="#fff" />
-                      <Ionicons name="information-circle-outline" size={24} color="#fff" />
-                      <MaterialCommunityIcons name={"dots-vertical"} size={20} color={"#fff"} />
-                  </View>
-              )
           }}
       />
       <Stack.Screen 

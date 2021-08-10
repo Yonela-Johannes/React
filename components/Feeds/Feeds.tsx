@@ -1,16 +1,20 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import styles from './styles'
-import { FeedType } from '../../types'
+import styles from './styles';
+import { FeedType } from '../../types';
+import LeftContainer from './LeftContainer/index';
+import MainContainer from "./MainContainer/index";
+
 
 export type FeedTypeProps = {
-    tweet: FeedType,
+    feed: FeedType,
 }
 
-const Feeds = () => {
+const Feeds = ({ feed } : FeedTypeProps) => {
     return (
-        <View>
-            <Text> They listening to Music in the kitchen now</Text>
+        <View style={styles.container}>
+            <LeftContainer user={feed.user} />
+            <MainContainer  feed={feed}/>
         </View>
     )
 }

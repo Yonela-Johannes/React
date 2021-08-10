@@ -11,8 +11,6 @@ const RegisterScreen = ({ navigation }) => {
     const [town, setTown] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [imageUrl, setImageUrl] = useState('');
-
     
     useLayoutEffect(() => {
         navigation.setOptions({
@@ -28,23 +26,27 @@ const RegisterScreen = ({ navigation }) => {
         <ImageBackground style={{width:'100%', height: '100%'}} source={BG}>
         <KeyboardAvoidingView behavior="padding" style={styles.registerContainer} >
             <StatusBar style="light" />
-            <Text h3 style={{marginBottom: 50}}>
-                Create a React.Sigma acount
+            <Text style={{marginBottom: 30,
+            fontSize: '1.5em',
+            fontWeight: 'bold',
+            color: '#49274b',
+            }}>
+                Welcome to React
             </Text>
             <View style={styles.registerInputContainer}>
                 <Input style={{ outlineWidth: 0 }} 
-                placeholder="Full Name" 
+                placeholder="Name" 
                 autofocus type='text'
                 value={name}
                 onChangeText={(text) => setName(text)}
                 />
                 <Input style={{ outlineWidth: 0 }} 
-                placeholder="psuedonym e.g. King/Kween ? (Optional)" type='text'
+                placeholder="What name should we call you ?" type='text'
                 value={roomsName}
                 onChangeText={(text) => setRoomsName(text)}
                 />
                 <Input style={{ outlineWidth: 0 }} 
-                placeholder=" Where you from?" type='text'
+                placeholder="Where you from?" type='text'
                 value={town}
                 onChangeText={(text) => setRoomsName(text)}
                 />
@@ -59,12 +61,6 @@ const RegisterScreen = ({ navigation }) => {
                 value={password}
                 onChangeText={(text) => setPassword(text)}
                 />
-                <Input style={{ outlineWidth: 0 }} 
-                placeholder="Profile Picture Link (optional)" type='text'
-                value={imageUrl}
-                onChangeText={(text) => setImageUrl(text)}
-                onSubmitEditing={register}
-                />
             </View>
             <Button containerStyle={styles.button}
             raised 
@@ -72,7 +68,7 @@ const RegisterScreen = ({ navigation }) => {
             title="Register" />
             <View style={{ height: 100}} />
         </KeyboardAvoidingView >
-        </ImageBackground>
+    </ImageBackground>
     )
 }
 
