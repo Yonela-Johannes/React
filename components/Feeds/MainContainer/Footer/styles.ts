@@ -4,22 +4,20 @@ const styles = StyleSheet.create({
     container: {
         width: "100%",
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        paddingHorizontal: 20,
-        marginVertical: 20,
-        backgroundColor: 'gray',
-        borderRadius: 15,
-        paddingVertical: 5,
+        justifyContent: 'space-around',
+        paddingHorizontal: 5,
     },
     number: {
-        color: "grey",
+        color: "#ba9cc9",
         marginLeft: 5,
         justifyContent: 'center',
+        cursor: 'pointer'
     },
     iconContainer: {
-        color: '#49274b',
-        alignSelf: 'center',
+        color: '#ba9cc9',
+        alignItems: 'center',
         flexDirection: 'row',
+        cursor: 'pointer'
     }
 });
 

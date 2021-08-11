@@ -14,32 +14,28 @@ const Footer = ({ feed } : FooterTypeProps) => {
 
         <View style={styles.container}>
             <View style={styles.iconContainer}>
-                <MaterialCommunityIcons name="webhook" size={27} color="#49274b" />
-                {/* <Text style={styles.number}>{feed.numberOfReacts}</Text> */}
+                <MaterialCommunityIcons name="webhook" size={27} color="#ba9cc9" />
+                <Text style={styles.number}>{feed.numberOfReacts}</Text>
             </View>
             <View style={styles.iconContainer}>
-                <MaterialIcons name="dynamic-feed" size={27} color="#49274b" />
-                {/* <Text style={styles.number}>{feed.numberOfFeeds}</Text> */}
+                <MaterialIcons name="dynamic-feed" size={27} color="#ba9cc9" />
+                <Text style={styles.number}>{feed.numberOfFeeds}</Text>
             </View>
             <View style={styles.iconContainer}>
-                <FontAwesome name="comments-o" size={27} color="#49274b" />
-                {/* <Text style={styles.number}>{feed.numberofComments}</Text> */}
+                <FontAwesome name="comments-o" size={27} color="#ba9cc9" />
+                <Text style={styles.number}>{feed.numberOfComments}</Text>
             </View>
             <View style={styles.iconContainer}>
-                <Ionicons name="heart-circle-sharp" size={27} color="#49274b" />
-                {/* <Text style={styles.number}>{feed.numberOfLoves}</Text> */}
+                <Ionicons name="heart-circle-sharp" size={27} color="#ba9cc9" />
+                <Text style={styles.number}>{feed.numberOfLoves}</Text>
             </View>
             <View style={styles.iconContainer}>
-                <Ionicons name="heart-dislike-circle-outline" size={27} color="#49274b" />
-                {/* <Text style={styles.number}>{feed.numberOfUnLoves}</Text> */}
+                <FontAwesome5 name="laugh-beam" size={27} color="#ba9cc9" />
+                <Text style={styles.number}>{feed.numberOfLikes}</Text>
             </View>
             <View style={styles.iconContainer}>
-                <FontAwesome5 name="laugh-beam" size={27} color="#49274b" />
-                {/* <Text style={styles.number}>{feed.numberOfLikes}</Text> */}
-            </View>
-            <View style={styles.iconContainer}>
-                <FontAwesome5 name="angry" size={27} color="#49274b" />
-                {/* <Text style={styles.number}>{feed.numberOfUnlikes}</Text> */}
+                <FontAwesome5 name="angry" size={27} color="#ba9cc9" />
+                <Text style={styles.number}>{feed.numberOfUnlikes}</Text>
             </View>
         </View>
     )

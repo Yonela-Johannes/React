@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableOpacity} from 'react-native';
+import {TouchableOpacity, Image} from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import styles from './styles';
 
@@ -11,8 +11,10 @@ const NewReactButton = () => {
 
     
     return(
-        <TouchableOpacity style={styles.button} onPress={onPress}>
-            <MaterialCommunityIcons name="webhook" size={30} color="black" />
+        <TouchableOpacity activeOpacity={0.9} style={styles.button} onPress={onPress}>
+            <MaterialCommunityIcons name="webhook" size={30} color="#49274b" />
+            {/* <Image source={require('../../assets/images/reactSigma.png')} /> */}
+
         </TouchableOpacity>
     )
 }

@@ -11,7 +11,7 @@ export type LeftContainerTypeProps = {
 const LeftContainer = ( { user }: LeftContainerTypeProps) => {
     return (
         <View>
-            <ProfilePicture style={{width: '80px'}}/>
+            <ProfilePicture size={40} style={{width: 40, height: 40, borderRadius: 50}}/>
         </View>
     )
 }

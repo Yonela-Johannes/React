@@ -1,9 +1,10 @@
 import React, { useState, useLayoutEffect } from 'react';
-import { Button, Text, Input } from 'react-native-elements';
+import { Button, Text, Input} from 'react-native-elements';
 import {  KeyboardAvoidingView, View, ImageBackground } from 'react-native';
 import styles from './styles';
 import { StatusBar } from 'expo-status-bar';
 import BG from '../assets/images/sigmaLogo.png';
+
 
 const RegisterScreen = ({ navigation }) => {
     const [name, setName] = useState('');
@@ -67,6 +68,8 @@ const RegisterScreen = ({ navigation }) => {
             onPress={register} 
             title="Register" />
             <View style={{ height: 100}} />
+            <View>
+            </View>
         </KeyboardAvoidingView >
     </ImageBackground>
     )

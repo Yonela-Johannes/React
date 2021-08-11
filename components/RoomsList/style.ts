@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         color: 'grey',
     },
     searchContainer: {
-        // backgroundColor: 'grey',
+        backgroundColor: 'grey',
         width: '80%',
     },
     lastContainer: {

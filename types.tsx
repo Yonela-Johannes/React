@@ -1,8 +1,3 @@
-/**
- * Learn more about using TypeScript with React Navigation:
- * https://reactnavigation.org/docs/typescript/
- */
-
 export type RootStackParamList = {
   Root: undefined;
   NotFound: undefined;
@@ -49,6 +44,9 @@ export type ChatRoom = {
   users: User[];
   lastMessage: Message;
 }
+export type TownRoom = {
+  name: string,
+}
 
 export type ChamberRoom = {
   id: String,
@@ -74,11 +72,11 @@ export type FeedType = {
   user: UserType,
   createdAt: string,
   content: string,
-  numberOfComments: number;
-  numberFeeds?: number,
+  numberOfComments?: number;
+  numberOfFeeds?: number,
+  image?: string,
   numberOfLikes?: number,
   numberOfUnlikes?: number,
   numberOfLoves?: number,
-  numberOfUnLoves?: number,
-  numberOfReacts: number,
+  numberOfReacts?: number,
 }

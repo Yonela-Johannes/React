@@ -2,57 +2,56 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        width: '100%',
-        alignItems: "center",
+        flex: 1,
+        margin: 5,
     },
     feedHeaderContainer: {
         flexDirection: 'row',
-        // width: '100%',
-        flex: 1,
+        justifyContent: 'space-between',
+        borderRadius: 15,
+        color: "#49274b"
+        
     },
-    feedHeader: {
-        flexDirection: 'row',
-        width: '100%',
+    feedHeaderNames: {
+         flexDirection: 'row',
 
-    },
+     },
     name: {
-        marginHorizontal: "10px",
+        marginHorizontal: 5,
     },
     username: {
-        marginHorizontal: "10px",
+        marginHorizontal: 5,
         fontWeight: "bold",
         color: '#49274b',
         fontSize: '1.2em',
     },
     time: {
-        marginHorizontal: "10px",
+        marginHorizontal: 5,
         color: "grey",
         
     },
     image: {
         marginTop: 20,
-        marginHorizontal: "10px",
+        marginHorizontal: 5,
         width: "400px",
         height: "200px",
-        resizeMode: "cover",
+        resizeMode: "object-fit",
         borderRadius: 15,
         overflow: 'hidden',
-        padding: '20px'
+        padding: 5
 
     },
     feed: {
-        marginTop: "20px",
-        paddingHorizontal: "10px",
-        width: "500px",
+        marginTop: "10px",
+        paddingHorizontal: 5,
         lineHeight: "20px",
     },
     moreIcon: {
-        alignSelf: 'flex-start',
-        color: "grey",
+        justifyContent: "center",
+        alignSelf: 'center'
     },
     content: {
-        lineHeight: 18,
-
+        lineHeight: 20,
     }
 });
 
