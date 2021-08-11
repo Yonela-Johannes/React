@@ -5,7 +5,7 @@ import feed from '../../data/feed'
 import Feeds from '../Feeds/Feeds'
 
 const PageFeeds = () => (
-    <View style={{backgroundColor: 'red'}}>
+    <View style={{backgroundColor: 'gray'}}>
         <FlatList
         data={feed} 
         renderItem={({item}) => <Feeds feed={item} />}
