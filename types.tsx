@@ -74,7 +74,7 @@ export type FeedType = {
   user: UserType,
   createdAt: string,
   content: string,
-  numbeOfComments?: number;
+  numberOfComments: number;
   numberFeeds?: number,
   numberOfLikes?: number,
   numberOfUnlikes?: number,

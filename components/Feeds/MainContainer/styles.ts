@@ -1,9 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
+    container: {
+        width: '100%',
+        alignItems: "center",
+    },
     feedHeaderContainer: {
         flexDirection: 'row',
-        width: '100%',
+        // width: '100%',
+        flex: 1,
     },
     feedHeader: {
         flexDirection: 'row',
@@ -25,18 +30,29 @@ const styles = StyleSheet.create({
         
     },
     image: {
+        marginTop: 20,
         marginHorizontal: "10px",
+        width: "400px",
+        height: "200px",
+        resizeMode: "cover",
+        borderRadius: 15,
+        overflow: 'hidden',
+        padding: '20px'
 
     },
     feed: {
-        fontWeight: "bold",
-        margin: "10px",
+        marginTop: "20px",
         paddingHorizontal: "10px",
-        width: "75%",
+        width: "500px",
+        lineHeight: "20px",
     },
     moreIcon: {
         alignSelf: 'flex-start',
         color: "grey",
+    },
+    content: {
+        lineHeight: 18,
+
     }
 });
 
