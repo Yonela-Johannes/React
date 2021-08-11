@@ -13,10 +13,13 @@ const styles = StyleSheet.create({
     },
     number: {
         color: "grey",
+        marginLeft: 5,
+        justifyContent: 'center',
     },
     iconContainer: {
-        borderLeftWidth: .5,
-        color: 'grey',
+        color: '#49274b',
+        alignSelf: 'center',
+        flexDirection: 'row',
     }
 });
 
