@@ -3,6 +3,7 @@ export type RootStackParamList = {
   NotFound: undefined;
   Contacts: undefined;
   ChatRoom: undefined;
+  NewReact: undefined;
 };
 
 export type RoomsNavigatorParamList = {

@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         backgroundColor: '',
     },
     registerInputContainer: {
-    width: 330,
+         width: 330,
     },
 });
 

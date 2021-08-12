@@ -12,7 +12,19 @@ const Chambers = () => {
     return (        
         <View style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
               <ChamberListRooms townRoom={{name: "Woela Town here mybro"}}/>
-        <select>
+        <select style={{width: 400, 
+            padding: 10, 
+            overflow: 'hidden',
+            fontWeight: "bold",
+            outlineWidth: 0,
+            borderRadius: 15,
+            backgroundColor: 'white',
+            fontSize: '1.2em',
+            color: '#49274b',
+            borderWidth: 0,
+            paddingHorizontal: 5,
+            arrown: 'hidden',
+            }}>
             <option value="Belville">Belville</option>
             <option value="Belville">Wolseley</option>
             <option selected value="Belville">Ceres</option>

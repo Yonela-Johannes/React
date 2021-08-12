@@ -13,6 +13,7 @@ import ChatRoomScreen from './screens/ChatRoomScreen';
 import RoomChatScreen from './screens/RoomChatScreen';
 import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 import { Avatar } from 'react-native-elements';
+// import NewReactScreen from './screens/NewReactScreen'
 const globalScreenOptions = {
   headerStyle:{ backgroundColor: '#49274b'},
   headerTitleStyle: {color: 'white'},
@@ -62,6 +63,7 @@ export default function App() {
             )
           }} name="MainApp" component={MainApp} />
           <Stack.Screen name="chatRoom" component={ChatRoomScreen} options={{ title: 'Chat' }} />
+          {/* <Stack.Screen name="React" component={NewReactScreen} /> */}
           <Stack.Screen name="Room" component={RoomChatScreen} options={{ title: 'Room' }} />
           <Stack.Screen name="AddChat" component={AddChat} />
         </Stack.Navigator>
