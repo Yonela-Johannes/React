@@ -1,17 +1,15 @@
 
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import RoomScreens from '../screens/RoomScreens'
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ChatScreen from '../screens/ChatScreen';
 import { MainTabParamList, TabTwoParamList } from '../types';
-import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons'
 import {  FontAwesome5 } from '@expo/vector-icons'
 import ChamberScreen from '../screens/ChamberScreens';
-import HomeScreen from "../screens/HomeScreen";
 
 const mainTab = createBottomTabNavigator<MainTabParamList>();
 export default function MainTabNavigator() {
@@ -19,7 +17,7 @@ export default function MainTabNavigator() {
 
   return (
     <mainTab.Navigator
-      initialRouteName="Home"
+      initialRouteName="Chambers"
       tabBarOptions={{
          activeTintColor: Colors[colorScheme].background,
          style: {
@@ -30,16 +28,11 @@ export default function MainTabNavigator() {
          },
          
          }}>
-      <mainTab.Screen name="Home" component={HomeScreen} options={{
-           tabBarIcon: ({ color: string }) => <MaterialCommunityIcons name="home-heart" color="#fff" size={20} />,
-           tabBarLabel: () => null
-         }}
-         />
       <mainTab.Screen
         name="Chats"
         component={ChatScreen}
         options={{
-          tabBarIcon: ({ color: string }) => <Ionicons name="ios-chatbox-ellipses" color="#fff" size={20} />,
+          tabBarIcon: ({ color: string }) => <Ionicons name="md-chatbubbles-outline" size={24} color="#fff" />,
           tabBarLabel: () => null
         }}
         />
@@ -47,7 +40,7 @@ export default function MainTabNavigator() {
         name="Chambers"
         component={ChamberScreen}
         options={{
-          tabBarIcon: ({ color: string }) => <MaterialCommunityIcons name="webhook" color="#fff" size={20} />,
+          tabBarIcon: ({ color: string }) => <MaterialCommunityIcons name="webhook" color="green" size={28} />,
           tabBarLabel: () => null
         }}
         />

@@ -7,6 +7,9 @@ import BG from '../assets/images/sigmaLogo.png';
 
 
 const RegisterScreen = ({ navigation }) => {
+
+
+
     const [name, setName] = useState('');
     const [roomsName, setRoomsName] = useState('');
     const [town, setTown] = useState('');

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Alert } from 'react-native';
+import { View, Text} from 'react-native';
 import { Button , Input, Image } from 'react-native-elements';
 import {  KeyboardAvoidingView, ImageBackground  } from 'react-native';
 import { StatusBar } from 'expo-status-bar';

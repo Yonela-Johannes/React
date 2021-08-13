@@ -3,7 +3,7 @@ import { useRoute } from '@react-navigation/native';
 import chatRoomData from '../data/Chats';
 import { FlatList, ImageBackground } from 'react-native';
 import ChatMessage from '../components/ChatMessage';
-import BG from '../assets/images/reactlogobg.png';
+import  BG  from '../assets/images/reactlogobg.png';
 import InputBox from '../components/InputBox/Index';
 
 const ChatRoomScreen = ()=> {

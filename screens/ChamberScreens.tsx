@@ -1,14 +1,16 @@
-import * as React from "react";
+import  React, { useState }from "react";
 import { View } from "react-native";
 import ChamberHeader from "../components/ChambersListItem/ChamberHeader";
-import Chambers from "../components/ChamberListRooms/Chambers";
-
+import Kasi from './Kasi';
+import CustomListItem from "../components/CustomList/CustomListItem"
 export default function ChamberScreen(){
+
     return (
-        <View>
+      <View>
+        <CustomListItem />        
           <ChamberHeader />
-          <Chambers />
-        </View> 
+          <Kasi />
+      </View> 
     );
 }
 

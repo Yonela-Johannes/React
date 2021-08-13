@@ -5,23 +5,12 @@ const styles = StyleSheet.create({
         display: 'flex',
         position: 'fixed',
         flexDirection: 'row',
-        margin: 0,
-        width: '100%',
-        bottom: 50,
+        margin: 15,
+        right: 50,
+        top: 100,
         color: '#fff',
-        backgroundColor: 'grey',
-    },
-    mainContainer: {
-        display: 'flex',
-        justifyContent: 'spac-between',
+        width: '20px',
         alignItems: 'center',
-        flexDirection: 'row',
-        color: '#fff',
-        padding: 20,
-        // borderTop: {border: '1px solid black'},
-    },
-    midContainer: {
-        flex: 1
     },
 })
 

@@ -29,6 +29,7 @@ export type TabTwoParamList = {
 export type User = {
   id: String;
   name: String;
+  roomName: string;
   imgUri: String;
   status: String;
 }
@@ -46,7 +47,12 @@ export type ChatRoom = {
   lastMessage: Message;
 }
 export type TownRoom = {
-  name: string,
+  id: string,
+  roomname: string,
+  avatar: string,
+  users: User[];
+  occupation: string;
+  lastMessage: Message;
 }
 
 export type ChamberRoom = {

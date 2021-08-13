@@ -7,12 +7,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
-import AddChat from './screens/AddChatScreen'
 import MainApp from './screens/MainApp';
 import ChatRoomScreen from './screens/ChatRoomScreen';
 import RoomChatScreen from './screens/RoomChatScreen';
+import CustomListItemRooms from './components/CustomListItemRooms/CustomListItemRooms';
 import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 import { Avatar } from 'react-native-elements';
+import ChatScreenCreatedRoom from './screens/ChatScreenCreatedRoom'
 // import NewReactScreen from './screens/NewReactScreen'
 const globalScreenOptions = {
   headerStyle:{ backgroundColor: '#49274b'},
@@ -25,14 +26,13 @@ export default function App() {
     return (
       <NavigationContainer>
         <Stack.Navigator screenOptions={globalScreenOptions}
-          style={{
-            
-          }}
         >
-          <Stack.Screen 
-          name="React"
-          component={LoginScreen} />
+          <Stack.Screen name="React" component={LoginScreen} />
           <Stack.Screen name='Register' component={RegisterScreen} />
+          <Stack.Screen name='Chat' component={ChatScreenCreatedRoom} />
+          <Stack.Screen name="chatRoom" component={ChatRoomScreen} options={{ title: 'Chat' }} />
+          <Stack.Screen name="Room" component={RoomChatScreen} options={{ title: 'Room' }} />
+          <Stack.Screen name="CustomListRooms" component={CustomListItemRooms} />
           <Stack.Screen options={{
              headerTitle: () => (
                <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
@@ -62,10 +62,6 @@ export default function App() {
               </View>
             )
           }} name="MainApp" component={MainApp} />
-          <Stack.Screen name="chatRoom" component={ChatRoomScreen} options={{ title: 'Chat' }} />
-          {/* <Stack.Screen name="React" component={NewReactScreen} /> */}
-          <Stack.Screen name="Room" component={RoomChatScreen} options={{ title: 'Room' }} />
-          <Stack.Screen name="AddChat" component={AddChat} />
         </Stack.Navigator>
       </NavigationContainer>
     )
