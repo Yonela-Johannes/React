@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import { Message } from '../../types'
-import moment from 'moment'
+// import moment from 'moment'
 import styles from './Styles'
 
 export type ChatMessageProps = {
@@ -24,7 +24,7 @@ const ChatMessage = (props: ChatMessageProps) => {
             }
             ]}>
                 {!isMyMessage() && <Text style={styles.name}>{message.user.name}</Text>}
-                <Text style={styles.time}>{moment(message.createdAt).fromNow()}</Text>   
+                {/* <Text style={styles.time}>{moment(message.createdAt).fromNow()}</Text>    */}
                 <Text style={styles.message}>{message.content}</Text>
             </View>
         </View>

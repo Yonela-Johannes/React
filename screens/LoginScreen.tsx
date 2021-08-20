@@ -1,29 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text} from 'react-native';
 import { Button , Input, Image } from 'react-native-elements';
 import {  KeyboardAvoidingView, ImageBackground  } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import styles from './styles';
 import BG from '../assets/images/SigmaLogo.png';
+import { auth } from '../firebase';
+
 
 const LoginScreen = ({ navigation }) => {
     const [username, setUsername ] = useState('');
+    const [email, setEmail ] = useState('');
     const [password, setPassword] = useState('');
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged((authUser) => {
+            if (authUser) {
+                navigation.replace('MainApp')
+            }
+        });
+
+        return unsubscribe;
+    }, [])
 
 
     const signIn = (e) => {
         e.preventDefault();
-
-        if(username !== 'Prince Niello'){
-            alert("You have entered a wrong username");
-        }else if(password !== "123456" && username === "Prince Niello"){
-            alert("You have entered wrong password");
-        }
-        else
-        {
-            console.log("Logged In bro")
-            navigation.navigate('MainApp')            
-        }
+        auth
+        .signInWithEmailAndPassword(email, password)
+        .catch((error) => alert(error))
     }
     return (
         <ImageBackground style={{width:'100%', height: '100%'}} source={BG}>
@@ -39,8 +44,8 @@ const LoginScreen = ({ navigation }) => {
                 />
                 <View style={styles.inputContainer}>
                     <Input 
-                    placeholder="What do you call yourself ?" 
-                    autoFocus style={{ outlineWidth: 0 }} type={username} value={username}
+                    placeholder="Your Email" 
+                    autoFocus style={{ outlineWidth: 0 }} type={email} value={setEmail}
                     onChangeText={(text) => setUsername(text)} 
                     />
                     <Input 

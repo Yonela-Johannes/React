@@ -4,24 +4,26 @@ import {Avatar} from "react-native-elements";
 import { useNavigation } from '@react-navigation/native';
 import { AntDesign, FontAwesome, MaterialIcons, Ionicons} from '@expo/vector-icons';
 import styles from './styles';
-// import * as firebase from 'firebase';
-// import { db, auth } from '../firebase';
+import firebase from 'firebase';
+import { db, auth } from '../firebase';
 function ChatScreenCreatedRoom({route}) {
+
     const [input, setInput] = useState('');
     const [messages, setMessages] = useState([]);
 
     const navigation = useNavigation();
-    // const sendMessage = () => {
-    //     keyboard.dismiss();
-    //     db.collection('chats').doc(route.params.id).collection('messages').add({
-    //         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    //         message: input,
-    //         displayName: auth.currentuser, displayName,
-    //         email: auth.currentUser.email,
-    //         photoURL: auth.currentuser.photoURL
-    //     });
-    //     setInput('')
-    // };
+
+    const sendMessage = () => {
+        keyboard.dismiss();
+        db.collection('chats').doc(route.params.id).collection('messages').add({
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            message: input,
+            displayName: auth.currentUser, displayName,
+            email: auth.currentUser.email,
+            photoURL: auth.currentUser.photoURL
+        });
+        setInput('')
+    };
         // useLayoutEffect(() => {
         //     const unsubscribe = db
         //     .collection('chats')
@@ -75,8 +77,8 @@ function ChatScreenCreatedRoom({route}) {
                 <TouchableWithoutFeedback>
                 {/* <TouchableWithoutFeedback onPress={keyboard.dismiss}> */}
                 <>
-                    {/* <ScrollView contentContainerStyle={{paddingTop: 15}}>
-                            {messsages.map(({ id, data }) => 
+                    <ScrollView contentContainerStyle={{paddingTop: 15}}>
+                            {messages.map(({ id, data }) => 
                                 data.email === auth.currentUser.email ? (
                                     <View key={id} style={styles.receiver}>
                                         <Avatar rounded size={35} position="absolute" right={-5} bottom={-25}
@@ -98,9 +100,9 @@ function ChatScreenCreatedRoom({route}) {
                                     </View>
                                 )
                             )} 
-                    </ScrollView> */}
+                    </ScrollView>
 
-                    <ScrollView contentContainerStyle={{paddingTop: 15}}>
+                    {/* <ScrollView contentContainerStyle={{paddingTop: 15}}>
                         <View style={styles.receiver}>
                             <Avatar rounded size={35} position="absolute" right={-5} bottom={-25}
                             containerStyle={{position: 'absolute', bottom: -25, right: -5}}
@@ -118,7 +120,7 @@ function ChatScreenCreatedRoom({route}) {
                             </Text>
                             <Text style={styles.senderName}>@RussOfficell</Text>
                         </View>     
-                    </ScrollView>
+                    </ScrollView> */}
                     <View style={styles.footer}>
                         {/* footer input bar */}
                         <TextInput value={input} onChangeText={(text) => setInput(text)} style={styles.textInput}
