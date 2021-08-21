@@ -2,7 +2,7 @@ import React from 'react'
 import { ListItem, Avatar} from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 
-function RoomsHead( {id, chatName, enterchat }) {
+function RoomsHead( {id, chatName }) {
     const navigation = useNavigation();
 
     const enterRoom = (id, chatRoom) => {

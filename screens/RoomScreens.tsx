@@ -33,14 +33,11 @@ export default function RoomScreen({ navigation }) {
     <SafeAreaView>
       <ScrollView style={styles.container}>
         <CustomListItemRooms />
-          <View>
-            <Text>React Create</Text>
-          </View>
-            {/* <FlatList style={{width: '100%'}}
+            <FlatList style={{width: '100%'}}
             data={Rooms}
             renderItem={({ item }) => <RoomListItem room={item} /> }
             keyExtractor={(item) => item.id}
-            /> */}
+            />
           {rooms.map(({id, data: { chatName }}) => (
             <RoomsHead key={id} id={id} chatName={chatName} />
           ))}

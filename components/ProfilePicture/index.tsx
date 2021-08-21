@@ -29,7 +29,7 @@ export type ProfilePictureProps = {
 const ProfilePicture = ({}: ProfilePictureProps) => (
     <View>
         <Image 
-        source={require('../../assets/images/dp.jpg')} 
+        source={{imageUri: ""}} 
         style={{ width: 50, 
             height: 50, 
             borderRadius: 50}} 

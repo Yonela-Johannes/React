@@ -6,6 +6,7 @@ import { AntDesign, FontAwesome, MaterialIcons, Ionicons} from '@expo/vector-ico
 import styles from './styles';
 import firebase from 'firebase';
 import { db, auth } from '../firebase';
+
 function ChatScreenCreatedRoom({route}) {
 
     const [input, setInput] = useState('');
@@ -24,20 +25,20 @@ function ChatScreenCreatedRoom({route}) {
         });
         setInput('')
     };
-        // useLayoutEffect(() => {
-        //     const unsubscribe = db
-        //     .collection('chats')
-        //     .doc(route.params.id)
-        //     .collection['messages']
-        //     .orderBy('timestamp', 'desc')
-        //     .onSnapshot((snapshot) => setMessages(
-        //         snapshot.docs.map(doc => ({
-        //             id: doc.id,
-        //             data: doc.data(),
-        //         }))
-        //     ));
-        //     return unsubscribe;
-        // }, [route])
+    //     useLayoutEffect(() => {
+    //         const unsubscribe = db
+    //         .collection('chats')
+    //         .doc(route.params.id)
+    //         .collection['messages']
+    //         .orderBy('timestamp', 'desc')
+    //         .onSnapshot((snapshot) => setMessages(
+    //             snapshot.docs.map(doc => ({
+    //                 id: doc.id,
+    //                 data: doc.data(),
+    //             }))
+    //         ));
+    //         return unsubscribe;
+    //     }, [route])
     // const onClick = () => {
     //     navigation.navigate('chatRoom', {
     //     id: chatRoom.id,
@@ -57,10 +58,9 @@ function ChatScreenCreatedRoom({route}) {
             headerTitleAlign: 'left',
             headerTitle: () => (
                 <View style={{flexDirection: "row", alignItems: "center"}}>
-                    <Avatar rounded source={{uri: "https://scontent-cpt1-1.xx.fbcdn.net/v/t1.6435-9/133186417_3567703656684311_1769243332738256683_n.jpg?_nc_cat=102&ccb=1-4&_nc_sid=730e14&_nc_eui2=AeGrhS4Ag09OlbNUvrKkYNDe91Gq_BJk9033Uar8EmT3TZ6SsCgFiGfhZuulvZvHn9muB3zl0UarRcciyDwQhf6s&_nc_ohc=wPO9HLRQIJUAX_Xp-vz&_nc_ht=scontent-cpt1-1.xx&oh=553dbdedcffe9ae983f76651292a07ca&oe=6137D4C3"}}/>
-                    {/* <Text style={{color: 'white', marginLeft: 10, fontWeight: "700"}} >{route.params.chatName}</Text> */}
-                    <Text style={{color: 'white', marginLeft: 10, fontWeight: "700"}} >Niello</Text>
-                    <Text>React Chat Rooms</Text>
+                    <Avatar rounded source={{uri:  auth?.currentUser?.photoURL}}/>
+                    <Text style={{color: 'white', marginLeft: 10, fontWeight: "700"}} >{route.params.displayName}</Text>
+                    <Text style={{marginLeft: 20, color: "white", fontWeight: "700"}} >{route.params.chatName}</Text>
                 </View>
         )
         })
@@ -69,8 +69,7 @@ function ChatScreenCreatedRoom({route}) {
     return (
         <SafeAreaView style={{flex: 1, backgrounColor: "#49274b"}}>
             <StatusBar style='light' />
-             {/* <Text>{route.params.chatName}</Text>  */}
-             <Text>Niello chat room</Text>
+             <Text>{route.params.chatName}</Text> 
             <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"}
                 style={styles.container} keyboardVerticalOffset={90}
             >

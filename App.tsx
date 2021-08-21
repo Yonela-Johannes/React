@@ -8,7 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import MainApp from './screens/MainApp';
-import ChatRoomScreen from './screens/ChatRoomScreen';
+import ChatListIem from './components/ChatListItem/index';
 import RoomChatScreen from './screens/RoomChatScreen';
 import CustomListItemRooms from './components/CustomListItemRooms/CustomListItemRooms';
 import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
@@ -16,6 +16,7 @@ import { Avatar } from 'react-native-elements';
 import ChatScreenCreatedRoom from './screens/ChatScreenCreatedRoom'
 import { auth, db } from './firebase';
 import ChatScreen from './screens/ChatScreen'
+import ChatListItem from './components/ChatListItem/index';
 // import NewReactScreen from './screens/NewReactScreen'
 const globalScreenOptions = {
   headerStyle:{ backgroundColor: '#49274b'},
@@ -33,6 +34,7 @@ export default function App() {
           <Stack.Screen name='Register' component={RegisterScreen} />
           <Stack.Screen name='Chat' component={ChatScreen} />
           <Stack.Screen name='ChatRoom' component={ChatScreen} />
+          <Stack.Screen name='ChatList' component={ChatListItem} />
           <Stack.Screen name="createdChatRoom" component={ChatScreenCreatedRoom} options={{ title: 'Chat' }} />
           <Stack.Screen name="Room" component={RoomChatScreen} options={{ title: 'Room' }} />
           <Stack.Screen name="CustomListRooms" component={CustomListItemRooms} />
@@ -44,7 +46,9 @@ export default function App() {
             
              ),
              headerLeft: () => (
-              <ProfilePicture style={{marginVertical: "20px"}} />
+               <View>
+                 <Avatar  rounded source={{uri: auth?.currentUser?.photoURL}} />
+               </View>
              ),
             headerRight: () => (
               <View style={{
@@ -58,7 +62,7 @@ export default function App() {
                  <TouchableOpacity>
                     <Avatar
                     rounded
-                    source={{uri: auth?.curentUser?.photoURL}} />
+                    source={{ uri: auth?.currentUser?.photoURL }} />
                 </TouchableOpacity>
 
                 <TouchableOpacity>

@@ -6,8 +6,7 @@ import CustomListItem from "../components/CustomList/CustomListItem"
 export default function ChamberScreen(){
 
     return (
-      <View>
-        <CustomListItem />        
+      <View>      
           <ChamberHeader />
           <Kasi />
       </View> 

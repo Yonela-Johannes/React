@@ -1,10 +1,13 @@
 import  React, { useState }from "react";
 import { View, ScrollView, Text, TouchableOpacity} from "react-native";
 import ChamberHeader from "../components/ChambersListItem/ChamberHeader";
+import { useNavigation } from '@react-navigation/native';
 
+export default function Kasi({ id , chatName}){
 
-export default function Kasi(){
-      const [kasi, setKasi] = useState([
+    const navigation = useNavigation();
+
+    const [kasi, setKasi] = useState([
     {name: 'Albertinia',
      key: '1'},
     {name: 'Ashton',
@@ -138,14 +141,24 @@ export default function Kasi(){
     {name: 'Worcester',
      key: '67'},
     ]);
+
+    
+    const enterChat = (id, chatRoom) => {
+        navigation.navigate('createdChatRoom', {
+          id: id,
+          chatName: chatName,
+        })
+      }
+    console.log(kasi[0].name)
+
     return (
       <View style={{width: "60%"}}>
           <ChamberHeader />         
           <ScrollView style={{overflow: 'hidden'}}>
                 {kasi.map((item) => {
                 return (
-                    <View key={item.key}>
-                        <TouchableOpacity activeOpacity={.7}>
+                    <View>
+                        <TouchableOpacity activeOpacity={.7}  key={item.key} onPress={() => enterChat(id, chatName)}>
                             <Text style={{
                                 color: '#49274b',
                                 fontWeight: "bold",
