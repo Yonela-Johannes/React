@@ -45,7 +45,12 @@ const LoginScreen = ({ navigation }) => {
                 <View style={styles.inputContainer}>
                     <Input 
                     placeholder="Your Email" 
-                    autoFocus style={{ outlineWidth: 0 }} type={email} value={setEmail}
+                    autoFocus style={{ outlineWidth: 0 }} type={email} value={email}
+                    onChangeText={(text) => setEmail(text)} 
+                    />
+                    <Input 
+                    placeholder="Username" 
+                    autoFocus style={{ outlineWidth: 0 }} value={username}
                     onChangeText={(text) => setUsername(text)} 
                     />
                     <Input 

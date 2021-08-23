@@ -8,8 +8,9 @@ import useColorScheme from '../hooks/useColorScheme';
 import ChatScreen from '../screens/ChatScreen';
 import { MainTabParamList, TabTwoParamList } from '../types';
 import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons'
-import {  FontAwesome5 } from '@expo/vector-icons'
+import {  FontAwesome5, FontAwesome } from '@expo/vector-icons'
 import ChamberScreen from '../screens/ChamberScreens';
+import UserScreens from '../screens/UsersScreen'
 
 const mainTab = createBottomTabNavigator<MainTabParamList>();
 export default function MainTabNavigator() {
@@ -17,7 +18,7 @@ export default function MainTabNavigator() {
 
   return (
     <mainTab.Navigator
-      initialRouteName="Chambers"
+      initialRouteName="Users"
       tabBarOptions={{
          activeTintColor: Colors[colorScheme].background,
          style: {
@@ -49,6 +50,14 @@ export default function MainTabNavigator() {
         component={RoomScreens}
         options={{
           tabBarIcon: ({ color: string }) => <FontAwesome5 name="user-friends" color="#fff" size={20} />,
+          tabBarLabel: () => null
+        }}
+      />
+      <mainTab.Screen
+        name="Users"
+        component={UserScreens}
+        options={{
+          tabBarIcon: ({ color: string }) => <FontAwesome name="users" color="#fff" size={20} />,
           tabBarLabel: () => null
         }}
       />

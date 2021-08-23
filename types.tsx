@@ -3,7 +3,8 @@ export type RootStackParamList = {
   NotFound: undefined;
   Contacts: undefined;
   ChatRoom: undefined;
-  NewReact: undefined;
+  Users: undefined;
+
 };
 
 export type RoomsNavigatorParamList = {
@@ -20,6 +21,7 @@ export type MainTabParamList = {
   Calls: undefined;
   Chambers: undefined;
   Rooms: undefined;
+  Users: undefined;
 
 };
 
@@ -32,6 +34,8 @@ export type User = {
   roomName: string;
   imgUri: String;
   status: String;
+  occupation: string;
+  rank: number;
 }
 
 export type Message = {

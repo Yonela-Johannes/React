@@ -79,6 +79,14 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         outlineWidth: 0
 
+    },
+    error__message: {
+        color: "#721c24",
+        backgroundColor: "#f8d7da",
+        padding: 15,
+        textAlign: "center",
+        borderRadius: 5,
+        marginBottom: 10
     }
 });
 

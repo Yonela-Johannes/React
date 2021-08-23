@@ -6,7 +6,7 @@ import users from '../data/Users'
 export default function ContactsScreen() {
   return (
     <View style={styles.container}>
-    <FlatList style={{width: '100'}}
+    <FlatList style={{width: '100%'}}
      data={users}
     renderItem={({ item }) => <ContactListItem user={item} /> }
     keyExtractor={(item) => item.id}

@@ -2,7 +2,6 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { TouchableOpacity} from 'react-native'
 import { View } from 'react-native'
-import ProfilePicture from './components/ProfilePicture/index'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 import LoginScreen from './screens/LoginScreen';
@@ -11,13 +10,12 @@ import MainApp from './screens/MainApp';
 import ChatListIem from './components/ChatListItem/index';
 import RoomChatScreen from './screens/RoomChatScreen';
 import CustomListItemRooms from './components/CustomListItemRooms/CustomListItemRooms';
-import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 import { Avatar } from 'react-native-elements';
 import ChatScreenCreatedRoom from './screens/ChatScreenCreatedRoom'
 import { auth, db } from './firebase';
 import ChatScreen from './screens/ChatScreen'
 import ChatListItem from './components/ChatListItem/index';
-// import NewReactScreen from './screens/NewReactScreen'
 const globalScreenOptions = {
   headerStyle:{ backgroundColor: '#49274b'},
   headerTitleStyle: {color: 'white'},
@@ -30,7 +28,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator screenOptions={globalScreenOptions}
         >
-          <Stack.Screen name="React" component={LoginScreen} />
+          <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name='Register' component={RegisterScreen} />
           <Stack.Screen name='Chat' component={ChatScreen} />
           <Stack.Screen name='ChatRoom' component={ChatScreen} />
