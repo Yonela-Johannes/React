@@ -3,6 +3,8 @@ import { FlatList, StyleSheet } from 'react-native';
 import ContactListItem from '../components/ContactListItem';
 import { View } from '../components/Themed';
 import users from '../data/Users'
+
+
 export default function ContactsScreen() {
   return (
     <View style={styles.container}>

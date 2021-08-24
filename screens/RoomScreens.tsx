@@ -30,14 +30,9 @@ export default function RoomScreen({ navigation }) {
   }, []);
 
   return (
-    <SafeAreaView>
-      <ScrollView style={styles.container}>
+    <SafeAreaView style={{padding: 20, alignItems: 'center'}}>
         <CustomListItemRooms />
-            <FlatList style={{width: '100%'}}
-            data={Rooms}
-            renderItem={({ item }) => <RoomListItem room={item} /> }
-            keyExtractor={(item) => item.id}
-            />
+      <ScrollView style={styles.container}>
           {rooms.map(({id, data: { chatName }}) => (
             <RoomsHead key={id} id={id} chatName={chatName} />
           ))}
@@ -49,6 +44,7 @@ export default function RoomScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
+    width: '100%',
     height: "100%"
   },
 });

@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
 
     },
     error__message: {
-        color: "#721c24",
-        backgroundColor: "#f8d7da",
+        color: "#01010",
+        backgroundColor: "#f922",
         padding: 15,
         textAlign: "center",
         borderRadius: 5,

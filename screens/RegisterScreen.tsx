@@ -51,7 +51,6 @@ const RegisterScreen = ({ navigation }) => {
             }}>
                 Welcome to React
             </Text>
-            <Text style={styles.error__message}>This is an error message!</Text>
             <View style={styles.registerInputContainer}>
                 <Input style={{ outlineWidth: 0 }} 
                 placeholder="Name" 
@@ -90,7 +89,7 @@ const RegisterScreen = ({ navigation }) => {
             <Button containerStyle={styles.button}
             raised 
             onPress={register} 
-            title="Enter Chat" />
+            title="Register" />
             <View style={{ height: 100}} />
             <View>
             </View>

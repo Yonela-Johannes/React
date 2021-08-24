@@ -77,6 +77,13 @@ export type UserType = {
   createdAt: string,
   image?: string,
 }
+export type SelectYourTown = {
+  id: string,
+  name: string,
+  town: string,
+  username: string,
+  key: number,
+}
 
 export type FeedType = {
   id: string,

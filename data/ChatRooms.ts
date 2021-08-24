@@ -137,7 +137,7 @@ export default [{
     }, {
         id: 'u10',
         name: '6LACK',
-        imageUri: 'https://media.pitchfork.com/photos/5ef110478813ffa92664e42a/16:9/w_2512,h_1413,c_limit/6LACK.jpg',
+        // imageUri: 'https://media.pitchfork.com/photos/5ef110478813ffa92664e42a/16:9/w_2512,h_1413,c_limit/6LACK.jpg',
     }],
     lastMessage: {
         id: 'm9',

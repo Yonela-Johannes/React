@@ -4,7 +4,7 @@ import { Button , Input, Image } from 'react-native-elements';
 import {  KeyboardAvoidingView, ImageBackground  } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import styles from './styles';
-import BG from '../assets/images/SigmaLogo.png';
+// import BG from '../assets/images/SigmaLogo.png';
 import { auth } from '../firebase';
 
 
@@ -31,7 +31,7 @@ const LoginScreen = ({ navigation }) => {
         .catch((error) => alert(error))
     }
     return (
-        <ImageBackground style={{width:'100%', height: '100%'}} source={BG}>
+        // <ImageBackground style={{width:'100%', height: '100%'}} source={BG}>
             <KeyboardAvoidingView behavior='padding' style={styles.container}>
                 <StatusBar style="light" />
                 <Text style={{
@@ -65,7 +65,7 @@ const LoginScreen = ({ navigation }) => {
                 {/* <Button onPress={() => navigation.navigate("MainApp")}  containerStyle={styles.button} title="Login" /> */}
                 <Button onPress={() => navigation.navigate("Register")} containerStyle={styles.button} type="outline" title="Register" />
             </KeyboardAvoidingView>
-        </ImageBackground>
+        // </ImageBackground>
     )
 }
 

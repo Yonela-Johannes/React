@@ -11,14 +11,13 @@ import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons'
 import {  FontAwesome5, FontAwesome } from '@expo/vector-icons'
 import ChamberScreen from '../screens/ChamberScreens';
 import UserScreens from '../screens/UsersScreen'
-
 const mainTab = createBottomTabNavigator<MainTabParamList>();
 export default function MainTabNavigator() {
   const colorScheme = useColorScheme();
 
   return (
     <mainTab.Navigator
-      initialRouteName="Users"
+      initialRouteName="Chats"
       tabBarOptions={{
          activeTintColor: Colors[colorScheme].background,
          style: {
@@ -29,14 +28,14 @@ export default function MainTabNavigator() {
          },
          
          }}>
-      <mainTab.Screen
+      {/* <mainTab.Screen
         name="Chats"
         component={ChatScreen}
         options={{
           tabBarIcon: ({ color: string }) => <Ionicons name="md-chatbubbles-outline" size={24} color="#fff" />,
           tabBarLabel: () => null
         }}
-        />
+        /> */}
       <mainTab.Screen
         name="Chambers"
         component={ChamberScreen}
@@ -45,22 +44,22 @@ export default function MainTabNavigator() {
           tabBarLabel: () => null
         }}
         />
-      <mainTab.Screen
+      {/* <mainTab.Screen
         name="Rooms"
         component={RoomScreens}
         options={{
           tabBarIcon: ({ color: string }) => <FontAwesome5 name="user-friends" color="#fff" size={20} />,
           tabBarLabel: () => null
         }}
-      />
-      <mainTab.Screen
+      /> */}
+      {/* <mainTab.Screen
         name="Users"
         component={UserScreens}
         options={{
           tabBarIcon: ({ color: string }) => <FontAwesome name="users" color="#fff" size={20} />,
           tabBarLabel: () => null
         }}
-      />
+      /> */}
     </mainTab.Navigator>
   );
 }

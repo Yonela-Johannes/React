@@ -17,14 +17,15 @@ const ChatListItem = (props: ChatListItemProps) => {
 
     const navigation = useNavigation();
     const onClick = () => {
-        navigation.navigate('chatRoom', {
+        navigation.navigate('Room', {
         id: chatRoom.id,
         name: user.name,
         })
     }
     const user = chatRoom.users[1];
+
     return (
-        <TouchableWithoutFeedback onPress={onClick}>
+        <TouchableWithoutFeedback onPress={onClick} style={{cursor: 'pointer'}}>
         <View style={styles.container}>
             <View style={styles.leftContainer}>
             <Image source={{ uri: user.imageUri }} style={styles.avatar} />           

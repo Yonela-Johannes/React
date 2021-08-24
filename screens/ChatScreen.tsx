@@ -13,7 +13,6 @@ export default function ChatScreen() {
     renderItem={({ item }) => <ChatListItem chatRoom={item} /> }
     keyExtractor={(item) => item.id}
     />
-    <NewMessageButton />
     </View>
   );
 }
