@@ -25,10 +25,6 @@ const styles = StyleSheet.create({
     registerInputContainer: {
          width: 330,
     },
-
-    // container: {
-    //     flex: 1,
-    // },
     receiver: {
         padding : 15,
         backgroundColor: "#a9c0cc",

@@ -9,8 +9,6 @@ import { auth } from "../firebase"
 
 const RegisterScreen = ({ navigation }) => {
 
-
-
     const [name, setName] = useState('');
     const [chatName, setChatName] = useState('');
     const [town, setTown] = useState('');
@@ -40,8 +38,7 @@ const RegisterScreen = ({ navigation }) => {
             .catch((error) => alert(error.message));
     };
 
-    return(
-        // <ImageBackground style={{width:'100%', height: '100%'}} source={BG}>
+    return(        // <ImageBackground style={{width:'100%', height: '100%'}} source={BG}>
         <KeyboardAvoidingView behavior="padding" style={styles.registerContainer} >
             <StatusBar style="light" />
             <Text style={{marginBottom: 30,
@@ -95,6 +92,7 @@ const RegisterScreen = ({ navigation }) => {
             </View>
         </KeyboardAvoidingView >
     // </ImageBackground>
+
     )
 }
 

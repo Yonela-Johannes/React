@@ -31,13 +31,13 @@ export default function App() {
         <Stack.Navigator screenOptions={globalScreenOptions}
         >
           <Stack.Screen name="Login" component={LoginScreen} />
-          {/* <Stack.Screen name='Register' component={RegisterScreen} />
+          <Stack.Screen name='Register' component={RegisterScreen} />
           <Stack.Screen name='Chat' component={ChatScreen} />
           <Stack.Screen name='ChatList' component={ChatListItem} />
           <Stack.Screen name='ChatRoom' component={ChatScreen} />
-          <Stack.Screen name="createdChatRoom" component={ChatScreenCreatedRoom} options={{ title: 'Chat' }} />
           <Stack.Screen name="Room" component={RoomChatScreen} options={{ title: 'Room' }} />
-          <Stack.Screen name="CustomListRooms" component={CustomListItemRooms} /> */}
+          <Stack.Screen name="createdChatRoom" component={ChatScreenCreatedRoom} options={{ title: 'Chat' }} />
+          <Stack.Screen name="CustomListRooms" component={CustomListItemRooms} />
           <Stack.Screen options={{
              headerTitle: () => (
                <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
@@ -47,22 +47,22 @@ export default function App() {
              ),
              headerLeft: () => (
                <View>
-                 {/* <Avatar  rounded source={{uri: auth?.currentUser?.photoURL}} /> */}
+                 <Avatar  rounded source={{uri: auth?.currentUser?.photoURL}} />
                </View>
              ),
             headerRight: () => (
               <View style={{
                 flexDirection: 'row',
                 width: 170,
-                // cursor: 'pointer',
+                cursor: 'pointer',
                 justifyContent: "space-between",
                 backgroundColor: "transparent",
                 marginRight: "10",          
               }}>
                  <TouchableOpacity>
-                    {/* <Avatar
+                    <Avatar
                     rounded
-                    source={{ uri: auth?.currentUser?.photoURL }} /> */}
+                    source={{ uri: auth?.currentUser?.photoURL }} />
                 </TouchableOpacity>
 
                 <TouchableOpacity>
